@@ -79,16 +79,40 @@ body {
 
 }
 
-#madkurv {
-    background-image: url(madkurv.svg);
+#madkurv_2 {
+    background-image: url(madkurv_2.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 6vw;
+    height: 6vw;
+    position: absolute;
+    right: 40vw;
+    bottom: 7vw;
+    z-index: 5;
+
+}
+#madkurv_taeppe {
+    background-image: url(madkurv_taeppe2.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     width: 10vw;
     height: 10vw;
     position: absolute;
     right: 38vw;
-    bottom: 3vw;
+    bottom: 0.6vw;
     z-index: 5;
+
+}
+#glas_madkurv {
+    background-image: url(glas_madkurv.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 2.3vw;
+    height: 3.5vw;
+    position: absolute;
+    right: 44vw;
+    bottom: 6vw;
+    z-index: 7;
 
 }
 
@@ -133,7 +157,7 @@ body {
 
 #munchie_container {
     position: absolute;
-    z-index: 5;
+    z-index: 6;
 }
 
 #munchie_sprite {
@@ -466,3 +490,21 @@ body {
     }
 
 }
+
+.madkurv_tag {
+    animation-name: madkurv_tag_kf;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes madkurv_tag_kf {
+    0% {
+        transform: translate(-9.5vw, -2vw);
+    }
+    100% {
+      transform: translate(-43vw, -9vw);
+    }
+}
+

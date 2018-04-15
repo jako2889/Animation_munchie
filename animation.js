@@ -12,13 +12,15 @@ $("#start").on("click", munchie_moves_in);
 
 $("#trin2").on("click", munchie_position_in);
 
-$("#trin3").on("click", munchie_snige_in);
+//$("#trin3").on("click", munchie_valg);
 
-$("#trin4").on("click", munchie_samler_op);
+$("#trin4").on("click", munchie_snige_in);
 
-$("#trin5").on("click", munchie_snige_out);
+$("#trin5").on("click", munchie_samler_op);
 
-$("#trin6").on("click", munchie_spiser);
+$("#trin6").on("click", munchie_snige_out);
+
+$("#trin7").on("click", munchie_spiser);
 }
 
 function munchie_moves_in() {
@@ -75,6 +77,7 @@ function munchie_snige_out(){
     console.log("munchie_snige_out");
     $("#munchie_container").addClass("munchie_snige_out");
     $("#munchie_sprite").addClass("munchie-snige_walkcycle");
+    $("#madkurv_2").addClass("madkurv_tag");
 }
 
 function munchie_spiser(){
