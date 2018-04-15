@@ -356,6 +356,9 @@ body {
     top: 40vw;
     transform: scale(1.09);
 }
+.munchie_position_snige {
+    transform: translate(47.2vw, 37.5vw);
+}
 
 .munchie_gaber {
     animation-name: munchie_gaber_kf;
@@ -508,3 +511,7 @@ body {
     }
 }
 
+.madkurv_position_up {
+    transform: translate(0vw, -2vw);
+
+}

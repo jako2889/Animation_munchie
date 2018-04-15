@@ -69,12 +69,14 @@ function munchie_samler_op(){
     $("#munchie_container").removeClass("munchie_snige_in");
     $("#munchie_sprite").removeClass("munchie-snige_walkcycle");
 
-
-
+    $("#madkurv_2").addClass("madkurv_position_up");
+    $("#munchie_container").addClass("munchie_position_snige");
 }
 
 function munchie_snige_out(){
     console.log("munchie_snige_out");
+    $("#madkurv_2").addClass("madkurv_position_up");
+
     $("#munchie_container").addClass("munchie_snige_out");
     $("#munchie_sprite").addClass("munchie-snige_walkcycle");
     $("#madkurv_2").addClass("madkurv_tag");
