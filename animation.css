@@ -128,6 +128,59 @@ body {
     z-index: 6;
 }
 
+#valg_1_stjaelmaden {
+    background-image: url(Valg_1_stj%C3%A6lmaden.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 20vw;
+    height: 20vw;
+    position: absolute;
+    left: 18vw;
+    top: 15vw;
+    z-index: 5;
+    pointer-events: none;
+}
+#valg_1_stjaelmaden_ja {
+     background-image: url(Valg_1_stj%C3%A6lmaden_ja.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 5vw;
+    height: 15vw;
+    position: absolute;
+    left: 19vw;
+    top: 19vw;
+    z-index: 4;
+}
+
+#valg_1_stjaelmaden_nej {
+     background-image: url(Valg_1_stj%C3%A6lmaden_nej.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 5vw;
+    height: 15vw;
+    position: absolute;
+    left: 30vw;
+    top: 21vw;
+    z-index: 4;
+}
+
+.valg1_usynlig {
+    opacity: 0;
+}
+.valg1_synlig {
+    animation-name: valg_synlig_kf;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+@keyframes valg_synlig_kf {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
 #mand_container {
     position: absolute;
     z-index: 5;
