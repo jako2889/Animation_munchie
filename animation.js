@@ -12,6 +12,10 @@ function sidenvises() {
  $("#valg_1_stjaelmaden_ja").addClass("valg1_usynlig");
  $("#valg_1_stjaelmaden_nej").addClass("valg1_usynlig");
 
+$("#forrest-01")[0].play();
+
+$("#forrest-01").animate({volume:0.8}, 3000);
+
 $("#start").on("click", munchie_moves_in);
 }
 
@@ -20,6 +24,8 @@ function munchie_moves_in() {
 
         $("#munchie_container").removeClass("munchie_position_start");
         $("#munchie_container").removeClass("munchie_position_in");
+
+        $("#food_lyd")[0].play();
 
         $("#valg_1_stjaelmaden").addClass("valg1_usynlig");
         $("#valg_1_stjaelmaden_ja").addClass("valg1_usynlig");
@@ -47,6 +53,7 @@ function munchie_position_in() {
         $("#mand_container").removeClass("mand_position_start");
         $("#mand_sprite").removeClass("mand_puster");
 
+
         $("#munchie_container").addClass("munchie_position_in");
         $("#munchie_sprite").addClass("munchie_gaber");
         $("#mand_container").addClass("mand_move_in");
@@ -65,6 +72,8 @@ function munchie_valg(){
      $("#valg_1_stjaelmaden_nej").removeClass("valg1_usynlig");
      $("#mand_container").removeClass("mand_move_in");
      $("#mand_sprite").removeClass("mand_walkcycle");
+
+    $("#mand_lyd")[0].play();
 
      $("#mand_container").addClass("mand_position_in");
      $("#mand_sprite").addClass("mand_puster");
@@ -88,6 +97,10 @@ function munchie_snige_in(){
         $("#munchie_sprite").removeClass("munchie_gaber");
         $("#mand_sprite").removeClass("mand_puster");
 
+        $("#chicken_lyd2")[0].play();
+        $("#chicken_lyd2")[0].volume = 0.5;
+
+        $("#scene").addClass("scene_flash");
         $("#valg_1_stjaelmaden").addClass("valg1_usynlig");
         $("#valg_1_stjaelmaden_ja").addClass("valg1_usynlig");
         $("#valg_1_stjaelmaden_nej").addClass("valg1_usynlig");
@@ -106,6 +119,9 @@ function munchie_samler_op(){
 
     $("#munchie_container").removeClass("munchie_snige_in");
     $("#munchie_sprite").removeClass("munchie-snige_walkcycle");
+
+    $("#chicken_lyd")[0].play();
+    $("#chicken_lyd")[0].volume = 0.3;
 
     $("#madkurv_2").addClass("madkurv_position_up");
     $("#munchie_container").addClass("munchie_position_snige");

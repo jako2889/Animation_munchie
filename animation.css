@@ -12,6 +12,21 @@ body {
     overflow: hidden;
 }
 
+.scene_flash {
+    animation-name: scene_flash_kf;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+@keyframes scene_flash_kf {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+}
+
 #sky {
     background-image: url(sky.svg);
     background-repeat: no-repeat;
@@ -132,11 +147,11 @@ body {
     background-image: url(Valg_1_stj%C3%A6lmaden.svg);
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 20vw;
-    height: 20vw;
+    width: 40vw;
+    height: 40vw;
     position: absolute;
-    left: 18vw;
-    top: 15vw;
+    left: 29vw;
+    top: 2vw;
     z-index: 5;
     pointer-events: none;
 }
@@ -144,11 +159,11 @@ body {
      background-image: url(Valg_1_stj%C3%A6lmaden_ja.svg);
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 5vw;
-    height: 15vw;
+    width: 7vw;
+    height: 18vw;
     position: absolute;
-    left: 19vw;
-    top: 19vw;
+    left: 33vw;
+    top: 17vw;
     z-index: 4;
 }
 
@@ -156,11 +171,11 @@ body {
      background-image: url(Valg_1_stj%C3%A6lmaden_nej.svg);
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 5vw;
-    height: 15vw;
+    width: 8vw;
+    height: 19vw;
     position: absolute;
-    left: 30vw;
-    top: 21vw;
+    left: 53vw;
+    top: 18vw;
     z-index: 4;
 }
 
