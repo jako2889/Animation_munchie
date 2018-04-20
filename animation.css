@@ -25,7 +25,6 @@ body {
         opacity: 100;
     }
 }
-}
 
 #sky {
     background-image: url(sky.svg);
@@ -38,11 +37,20 @@ body {
     top: 3vw;
     z-index: 2;
 
-    animation-name: sky;
+    animation-name: sky_kf;
     animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
+}
+
+@keyframes sky_kf {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-100vw);
+    }
 }
 
 #baggrund-01 {
@@ -79,6 +87,45 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
     z-index: 7;
+}
+
+#game_over {
+    background-image: url(gamer_over_skilt.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 40vw;
+    height: 40vw;
+    position: absolute;
+    left: 29vw;
+    top: 0vw;
+    z-index: 8;
+    display: none;
+}
+
+#you_win {
+    background-image: url(you_win_skilt.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 40vw;
+    height: 40vw;
+    position: absolute;
+    left: 29vw;
+    top: -2vw;
+    z-index: 8;
+    display: none;
+}
+#valg_random {
+      background-image: url(valg_random_skilt-01.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 80vw;
+    height: 80vw;
+    position: absolute;
+    left: 30vw;
+    top: -10vw;
+    z-index: 8;
+    display: none;
+    cursor: pointer;
 }
 
 #stol {
@@ -165,6 +212,7 @@ body {
     left: 33vw;
     top: 17vw;
     z-index: 4;
+    cursor: pointer;
 }
 
 #valg_1_stjaelmaden_nej {
@@ -177,6 +225,45 @@ body {
     left: 53vw;
     top: 18vw;
     z-index: 4;
+    cursor: pointer;
+}
+
+#notforyou_boble {
+     background-image: url(notforyou_boble.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 29vw;
+    height: 7vw;
+    position: absolute;
+    right: 9vw;
+    bottom: 20vw;
+    z-index: 8;
+    display: none;
+}
+
+#food_boble {
+    background-image: url(food_boble-02.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 29vw;
+    height: 7vw;
+    position: absolute;
+    left: 12vw;
+    bottom: 20vw;
+    z-index: 8;
+    display: none;
+}
+#ihaveanidea_boble {
+     background-image: url(ihaveanidea_boble.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 29vw;
+    height: 7vw;
+    position: absolute;
+    right: 9vw;
+    bottom: 20vw;
+    z-index: 8;
+    display: none;
 }
 
 .valg1_usynlig {
@@ -229,7 +316,7 @@ body {
 }
 
 #munchie_sprite {
-    background-image: url(munchie_walk_4-01.svg);
+    background-image: url(munchie_walk_4-02-01-01.svg);
     background-size: 800% 500%;
     width: 9vw;
     height: 13vw;
@@ -299,15 +386,6 @@ body {
 
 }
 
-@keyframes sky {
-    0% {
-        transform: translateX(100vw);
-    }
-    100% {
-        transform: translateX(-100vw);
-    }
-}
-
 .mand_position_start {
 
     transform: translate(76vw, 31vw);
@@ -355,6 +433,24 @@ body {
 
 }
 
+.mand_flexer2 {
+    animation-name: mand_flexer2_kf;
+    animation-duration: 1s;
+    animation-timing-function: steps(2);
+    animation-iteration-count: infinite;
+
+
+}
+
+@keyframes mand_flexer2_kf {
+    0% {
+        background-position: 0 -600%;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+
+}
 .mand_flexer {
     animation-name: mand_flexer_kf;
     animation-duration: 1s;
@@ -424,6 +520,10 @@ body {
     top: 40vw;
     transform: scale(1.09);
 }
+
+.munchie_position_slut {
+    transform: translate(15.2vw, 32.5vw);
+}
 .munchie_position_snige {
     transform: translate(47.2vw, 37.5vw);
 }
@@ -461,7 +561,7 @@ body {
         background-position: 0 -300%;
     }
     100% {
-        background-position: -100% -300%;
+        background-position: -200% -300%;
     }
 
 }
@@ -582,4 +682,8 @@ body {
 .madkurv_position_up {
     transform: translate(0vw, -2vw);
 
+}
+
+.madkurv_position_in {
+   transform: translate(-30vw, -6vw);
 }
