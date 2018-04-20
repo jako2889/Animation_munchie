@@ -14,6 +14,9 @@ function sidenvises() {
  $("#valg_1_stjaelmaden_ja").addClass("valg1_usynlig");
  $("#valg_1_stjaelmaden_nej").addClass("valg1_usynlig");
 
+$("#chicken_sprite2").hide();
+$("#chicken_sprite3").hide();
+
 $("#forrest-01")[0].play();
 
 $("#forrest-01").animate({volume:0.8}, 3000);
@@ -238,6 +241,35 @@ function kylling_jagt() {
     $("#munchie_graeder_lyd")[0].pause();
     $("#ihaveanidea_boble").hide();
     $("#valg_random").hide();
+    $("#chicken_sprite").removeClass("chicken_spiser");
+    $("#munchie_sprite").removeClass("munchie_blinker");
+
+    $("#chicken_lyd2")[0].play();
+    $("#chicken_lyd2")[0].volume = 0.5;
+
+    $("#chicken_sprite2").show();
+    $("#chicken_sprite3").show();
+    $("#chicken_boble").show();
+    $("#chicken_container2").addClass("chicken_position_start2");
+    $("#chicken_container3").addClass("chicken_position_start3");
+
+    setTimeout(kylling_jagt_dialog, 2000);
+}
+
+function kylling_jagt_dialog() {
+    console.log("Dialog inden jagt");
+    $("#chicken_boble").hide();
+
+    $("#imready_boble").show();
+
+    setTimeout(kylling_jagt_begynd, 2000);
+}
+
+function kylling_jagt_begynd() {
+    console.log("Fang kyllingerne");
+    $("#imready_boble").hide();
+
+    $("#catch_chickens").show();
 }
 
 function munchie_lose() {
