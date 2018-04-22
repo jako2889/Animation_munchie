@@ -6,7 +6,7 @@ $(window).on("load", sidenvises);
 
 function sidenvises() {
 
- $("#try_again").off("click", sidenvises);
+ // $("#try_again").off("click", sidenvises);
 
  $("#try_again").hide();
  $("#game_over").hide();
@@ -205,14 +205,14 @@ function munchie_spiser(){
     $("#mand_sprite").addClass("mand_gaber");
 
     $("#you_win").show();
-    $("#try_again").show();
+  //  $("#try_again").show();
     $("#yumilicious_boble").show();
 
 
     $("#happy_lyd")[0].play();
     $("#happy_lyd")[0].volume = 0.2;
 
-    $("#try_again").on("click", sidenvises);
+  //  $("#try_again").on("click", sidenvises);
 }
 
 function munchie_graeder() {
@@ -354,7 +354,7 @@ function munchie_lose() {
     $("#munchie_sprite").addClass("munchie_blinker");
 
     $("#game_over").show();
-    $("#try_again").show();
+   // $("#try_again").show();
     $("#lazy_beaver_boble").show();
     $("#munchie_graed_lyd")[0].play();
     $("#catch_chickens").hide();
@@ -364,7 +364,7 @@ function munchie_lose() {
     $("#sad_lyd")[0].play();
     $("#munchie_graed_lyd")[0].play();
 
-    $("#try_again").on("click", sidenvises);
+  //  $("#try_again").on("click", sidenvises);
 
     }
 
