@@ -12,6 +12,8 @@ function sidenvises() {
 
  $("#chicken_container").addClass("chicken_position_start");
 
+ $("#scene").addClass("scene_flash");
+
  $("#valg_1_stjaelmaden").addClass("valg1_usynlig");
  $("#valg_1_stjaelmaden_ja").addClass("valg1_usynlig");
  $("#valg_1_stjaelmaden_nej").addClass("valg1_usynlig");
@@ -182,6 +184,8 @@ function munchie_spiser(){
     $("#mand_sprite").addClass("mand_gaber");
 
     $("#you_win").show();
+    $("#yumilicious_boble").show();
+
 
     $("#happy_lyd")[0].play();
     $("#happy_lyd")[0].volume = 0.2;
@@ -327,6 +331,7 @@ function munchie_lose() {
     $("#munchie_sprite").addClass("munchie_blinker");
 
     $("#game_over").show();
+    $("#lazy_beaver_boble").show();
     $("#munchie_graed_lyd")[0].play();
     $("#catch_chickens").hide();
 
