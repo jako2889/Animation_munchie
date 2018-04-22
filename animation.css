@@ -129,7 +129,7 @@ body {
 }
 
 #catch_chickens {
-      background-image: url(catch_chickens_skilt.svg);
+      background-image: url(catch_chickens_2.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     width: 50vw;
@@ -205,7 +205,7 @@ body {
 }
 
 #valg_1_stjaelmaden {
-    background-image: url(Valg_1_stj%C3%A6lmaden.svg);
+    background-image: url(valg_1_stjaelmaden_2.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     width: 40vw;
@@ -217,26 +217,26 @@ body {
     pointer-events: none;
 }
 #valg_1_stjaelmaden_ja {
-     background-image: url(Valg_1_stj%C3%A6lmaden_ja.svg);
+     background-image: url(valg_1_stjaelmaden_ja_2.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     width: 7vw;
-    height: 18vw;
+    height: 19vw;
     position: absolute;
     left: 33vw;
-    top: 17vw;
+    top: 16vw;
     z-index: 4;
     cursor: pointer;
 }
 
 #valg_1_stjaelmaden_nej {
-     background-image: url(Valg_1_stj%C3%A6lmaden_nej.svg);
+     background-image: url(valg_1_stjaelmaden_nej_2.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     width: 8vw;
     height: 19vw;
     position: absolute;
-    left: 53vw;
+    left: 57vw;
     top: 18vw;
     z-index: 4;
     cursor: pointer;
@@ -249,7 +249,7 @@ body {
     width: 29vw;
     height: 7vw;
     position: absolute;
-    right: 9vw;
+    right: 6vw;
     bottom: 20vw;
     z-index: 8;
     display: none;
@@ -361,7 +361,6 @@ body {
 #chicken_container {
     position: absolute;
     z-index: 29;
-   cursor: pointer;
 }
 
 #chicken_sprite {
@@ -375,7 +374,6 @@ body {
 #chicken_container2 {
     position: absolute;
     z-index: 29;
-cursor: pointer;
 }
 
 #chicken_sprite2 {

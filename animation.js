@@ -102,7 +102,7 @@ $("#valg_1_stjaelmaden_nej").on("click", munchie_graeder);
 function munchie_snige_in(){
     console.log("munchie_snige_in");
 
-    $("#valg_1_stjaelmaden_nej").off("animationend", munchie_snige_in);
+    $("#valg_1_stjaelmaden_ja").off("click", munchie_snige_in);
 
         $("#notforyou_boble").hide();
         $("#valg_1_stjaelmaden").removeClass("valg1_synlig");
@@ -117,10 +117,11 @@ function munchie_snige_in(){
         $("#chicken_lyd2")[0].volume = 0.5;
 
         $("#scene").addClass("scene_flash");
+        $("#knap_lyd")[0].play();
+
         $("#valg_1_stjaelmaden").addClass("valg1_usynlig");
         $("#valg_1_stjaelmaden_ja").addClass("valg1_usynlig");
         $("#valg_1_stjaelmaden_nej").addClass("valg1_usynlig");
-
         $("#munchie_container").addClass("munchie_snige_in");
         $("#munchie_sprite").addClass("munchie-snige_walkcycle");
         $("#mand_sprite").addClass("mand_flexer");
@@ -200,6 +201,8 @@ function munchie_graeder() {
         $("#valg_1_stjaelmaden_nej").removeClass("valg1_synlig");
 
         $("#scene").addClass("scene_flash");
+        $("#knap_lyd")[0].play();
+
         $("#valg_1_stjaelmaden").addClass("valg1_usynlig");
         $("#valg_1_stjaelmaden_ja").addClass("valg1_usynlig");
         $("#valg_1_stjaelmaden_nej").addClass("valg1_usynlig");
@@ -248,6 +251,7 @@ function kylling_jagt() {
 
     $("#chicken_lyd2")[0].play();
     $("#chicken_lyd2")[0].volume = 0.5;
+    $("#knap_lyd")[0].play();
 
     $("#chicken_sprite2").show();
     $("#chicken_sprite3").show();
@@ -319,7 +323,8 @@ function munchie_lose() {
     $("#valg_random").hide();
     $("#snige_lyd")[0].pause();
 
-    $("#munchie_sprite").addClass("munchie_gaber");
+
+    $("#munchie_sprite").addClass("munchie_blinker");
 
     $("#game_over").show();
     $("#munchie_graed_lyd")[0].play();
