@@ -162,8 +162,8 @@ function munchie_snige_out(){
 function munchie_spiser(){
     console.log("munchie_spiser");
 
-
     $("#madkurv_2").off("animationend", munchie_spiser);
+
 
     $("#munchie_container").removeClass("munchie_position_in");
     $("#munchie_container").removeClass("munchie_position_snige");
@@ -313,6 +313,7 @@ function faerdig() {
 
 function munchie_lose() {
     console.log("You lose!");
+    if (ErDerKlikketNok == false) {
 
     $("#ihaveanidea_boble").hide();
     $("#valg_random").hide();
@@ -328,5 +329,8 @@ function munchie_lose() {
     $("#sad_lyd")[0].volume = 0.2;
     $("#sad_lyd")[0].play();
     $("#munchie_graeder_lyd")[0].play();
+
+    }
+
 
 }
