@@ -11,6 +11,12 @@ body {
     z-index: 2;
     padding: 1em;
 }
+#tekst {
+    position: absolute;
+}
+#tekst p {
+    margin-top: 0;
+}
 
 #forgrund-01 {
     position: absolute;
@@ -54,6 +60,24 @@ body {
 
     margin: 0 auto;
     overflow: hidden;
+}
+
+.scene_flash {
+    animation-name: scene_flash_kf;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+
+#traer {
+    background-image: url(traer.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 35vw;
+    height: 45vw;
+    position: absolute;
+    right: -4.3vw;
+    top: 6.2vw;
+    z-index: 3;
 }
 
 #baggrund-01 {
@@ -141,6 +165,82 @@ header {
 @keyframes sky_kf {
     0% {
         transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-100vw);
+    }
+}
+
+#sky1 {
+       background-image: url(sky1.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 30vw;
+    height: 30vw;
+    position: absolute;
+    left: 8vw;
+    top: 1vw;
+    z-index: 1;
+
+    animation-name: sky1_kf;
+    animation-duration: 23s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes sky1_kf {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-100vw);
+    }
+}
+#sky2 {
+       background-image: url(sky2.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 30vw;
+    height: 30vw;
+    position: absolute;
+    left: 8vw;
+    top: 3vw;
+    z-index: 1;
+
+    animation-name: sky2_kf;
+    animation-duration: 23s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes sky2_kf {
+    0% {
+        transform: translateX(-100vw);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+#sky3{
+       background-image: url(sky3.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 30vw;
+    height: 30vw;
+    position: absolute;
+    left: 8vw;
+    top: 10vw;
+    z-index: 1;
+
+    animation-name: sky3_kf;
+    animation-duration: 28s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes sky3_kf {
+    0% {
+        transform: translateX(200vw);
     }
     100% {
         transform: translateX(-100vw);

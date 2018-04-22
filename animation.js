@@ -25,7 +25,8 @@ $("#forrest-01")[0].play();
 
 $("#forrest-01").animate({volume:0.8}, 3000);
 
-$("#start").on("click", munchie_moves_in);
+// $("#start").on("click", munchie_moves_in);
+setTimeout(munchie_moves_in, 3000);
 }
 
 function munchie_moves_in() {
