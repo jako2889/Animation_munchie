@@ -1,5 +1,7 @@
 var antalklik = 0;
 
+var ErDerKlikketNok = false;
+
 $(window).on("load", sidenvises);
 
 function sidenvises() {
@@ -163,6 +165,7 @@ function munchie_spiser(){
 
     $("#madkurv_2").off("animationend", munchie_spiser);
 
+    $("#munchie_container").removeClass("munchie_position_in");
     $("#munchie_container").removeClass("munchie_position_snige");
     $("#madkurv_2").removeClass("madkurv_position_up");
     $("#snige_lyd")[0].pause();
@@ -170,6 +173,7 @@ function munchie_spiser(){
     $("#munchie_container").removeClass("munchie_snige_out");
     $("#munchie_sprite").removeClass("munchie-snige_walkcycle");
     $("#madkurv_2").removeClass("madkurv_tag");
+    $("#catch_chickens").hide();
 
     $("#madkurv_2").addClass("madkurv_position_in");
     $("#munchie_container").addClass("munchie_position_slut");
@@ -202,17 +206,16 @@ function munchie_graeder() {
         $("#mand_sprite").addClass("mand_gaber");
         $("#munchie_sprite").addClass("munchie_blinker");
 
-        $("#sad_lyd")[0].volume = 0.2;
-        $("#sad_lyd")[0].play();
-        $("#munchie_graeder_lyd")[0].play();
+        $("#munchie_graed_lyd")[0].play();
+        $("#iwantfood_boble").show();
 
 
-  setTimeout(mand_valg, 5000);
+  setTimeout(mand_valg, 3800);
 }
 
 function mand_valg() {
     console.log("mand_valg");
-    $("#sad_lyd")[0].pause();
+    $("#iwantfood_boble").hide();
     $("#mand_sprite").removeClass("mand_gaber");
 
     $("#valg_random").show();
@@ -238,7 +241,6 @@ function randomValg() {
 
 function kylling_jagt() {
     console.log("Jagt kyllingen tæller del");
-    $("#munchie_graeder_lyd")[0].pause();
     $("#ihaveanidea_boble").hide();
     $("#valg_random").hide();
     $("#chicken_sprite").removeClass("chicken_spiser");
@@ -270,6 +272,43 @@ function kylling_jagt_begynd() {
     $("#imready_boble").hide();
 
     $("#catch_chickens").show();
+
+    setTimeout(munchie_lose, 10000);
+    kanKlikke();
+}
+
+function kanKlikke() {
+    console.log("kan klikke");
+
+    $("#chicken_container").on("click", klikPaaKylling);
+}
+
+
+function klikPaaKylling() {
+    console.log("klik på kylling");
+    $("#chicken_container").off("click", klikPaaKylling);
+    $(this).hide();
+    antalklik++;
+
+    $("#munchie_container").addClass("munchie_tager_chicken");
+    $("#munchie_container").on("animationend", faerdig);
+}
+
+function faerdig() {
+    console.log("Færdig med at fange en kylling");
+    $("#munchie_container").off("animationend", faerdig);
+    $("#munchie_container").removeClass("munchie_tager_chicken");
+    $("#munchie_container").addClass("munchie_position_in");
+
+    if (antalklik >= 1) {
+       ErDerKlikketNok = true;
+
+        munchie_spiser();
+    } else {
+        console.log("klik på kylling igen");
+        klikPaaKylling();
+    }
+
 }
 
 function munchie_lose() {
@@ -279,7 +318,11 @@ function munchie_lose() {
     $("#valg_random").hide();
     $("#snige_lyd")[0].pause();
 
+    $("#munchie_sprite").addClass("munchie_gaber");
+
     $("#game_over").show();
+    $("#munchie_graed_lyd")[0].play();
+    $("#catch_chickens").hide();
 
     $("#sad_lyd")[0].currentTime = 1;
     $("#sad_lyd")[0].volume = 0.2;
