@@ -176,6 +176,19 @@ body {
     z-index: 8;
     display: none;
 }
+#try_again {
+     background-image: url(try_again_skilt.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 20vw;
+    height: 20vw;
+    position: absolute;
+    left: 5vw;
+    top: 10vw;
+    z-index: 8;
+    display: none;
+    cursor: pointer;
+}
 
 #you_win {
     background-image: url(you_win_skilt.svg);

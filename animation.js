@@ -6,6 +6,26 @@ $(window).on("load", sidenvises);
 
 function sidenvises() {
 
+ $("#try_again").off("click", sidenvises);
+
+ $("#try_again").hide();
+ $("#game_over").hide();
+ $("#lazy_beaver_boble").hide();
+ $("#you_win").hide();
+ $("#yumilicious_boble").hide();
+
+ $("#munchie_sprite").removeClass("munchie_blinker");
+ $("#madkurv_2").removeClass("madkurv_position_in");
+ $("#munchie_container").removeClass("munchie_position_slut");
+ $("#munchie_sprite").removeClass("munchie_gaber");
+ $("#mand_sprite").removeClass("mand_gaber");
+ $("#munchie_container").removeClass("munchie_position_in");
+ $("#mand_sprite").removeClass("mand_flexer2");
+ $("#mand_container").removeClass("mand_position_in");
+
+ $("#sad_lyd")[0].pause();
+ $("#happy_lyd")[0].pause();
+
  $("#munchie_container").addClass("munchie_position_start");
 
  $("#mand_container").addClass("mand_position_start");
@@ -185,11 +205,14 @@ function munchie_spiser(){
     $("#mand_sprite").addClass("mand_gaber");
 
     $("#you_win").show();
+    $("#try_again").show();
     $("#yumilicious_boble").show();
 
 
     $("#happy_lyd")[0].play();
     $("#happy_lyd")[0].volume = 0.2;
+
+    $("#try_again").on("click", sidenvises);
 }
 
 function munchie_graeder() {
@@ -229,7 +252,6 @@ function mand_valg() {
     $("#valg_random").show();
 
     $("#mand_sprite").addClass("mand_flexer2");
-    $("#ihaveidea_lyd")[0].play();
     $("#ihaveanidea_boble").show();
 //    I HAVE IDEA del
 
@@ -332,6 +354,7 @@ function munchie_lose() {
     $("#munchie_sprite").addClass("munchie_blinker");
 
     $("#game_over").show();
+    $("#try_again").show();
     $("#lazy_beaver_boble").show();
     $("#munchie_graed_lyd")[0].play();
     $("#catch_chickens").hide();
@@ -339,7 +362,9 @@ function munchie_lose() {
     $("#sad_lyd")[0].currentTime = 1;
     $("#sad_lyd")[0].volume = 0.2;
     $("#sad_lyd")[0].play();
-    $("#munchie_graeder_lyd")[0].play();
+    $("#munchie_graed_lyd")[0].play();
+
+    $("#try_again").on("click", sidenvises);
 
     }
 
